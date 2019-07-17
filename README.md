@@ -1,21 +1,39 @@
-# vcustomers
+// 获取所有用户信息
+http://localhost:3000/users
 
-> A Vue.js project
+// 获取id为1的用户信息
+http://localhost:3000/users/1
 
-## Build Setup
+// 获取公司的所有信息
+http://localhost:3000/companies
 
-``` bash
-# install dependencies
-npm install
+// 获取单个公司的信息
+http://localhost:3000/companies/1
 
-# serve with hot reload at localhost:8080
-npm run dev
+// 获取所有公司id为3的用户
+http://localhost:3000/companies/3/users
 
-# build for production with minification
-npm run build
+// 根据公司名字获取信息
+http://localhost:3000/companies?name=Microsoft
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+// 根据多个名字获取公司信息
+http://localhost:3000/companies?name=Microsoft&name=Apple
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+// 获取一页中只有两条数据
+http://localhost:3000/companies?_page=1&_limit=2
+
+// 升序排序 asc升序 desc降序
+http://localhost:3000/companies?_sort=name&_order=asc
+
+// 获取年龄30及以上的
+http://localhost:3000/users?age_gte=30
+
+// 获取年龄在30到40之间
+http://localhost:3000/users?age_gte=30&age_lte=40
+
+// 搜索用户信息
+http://localhost:3000/users?q=h
+
+
+
+
